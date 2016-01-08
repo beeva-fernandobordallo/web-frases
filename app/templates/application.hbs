@@ -16,6 +16,11 @@
         <li><a class="teal-text text-darken-4" {{action 'setLocale' 'es'}}>{{t 'lang.spanish'}}</a></li>
       </ul>
     <ul class="right hide-on-med-and-down">
+      {{#if session.isAuthenticated}}
+        <li>
+          <a href="#modalNuevaEntrada" class="valign-wrapper black-text modal-trigger">Nueva <i class="right material-icons">add</i></a>
+        </li>
+      {{/if}}
       <li>
         {{#if session.isAuthenticated}}
           <a {{action "signOut"}}>Sign out</a>
@@ -27,13 +32,12 @@
       </li>
     </ul>
     <div id="slide-out" class="side-nav">
-      <div class="row">
-        <br>
-        <div class="center-align">
-          <img class="responsive-img" src="/assets/img/fire-logo.png" {{action 'redirectHome'}}>
-        </div>
-      </div>
       <ul>
+        {{#if session.isAuthenticated}}
+          <li>
+            <a href=".modalNuevaEntrada" class="valign-wrapper black-text modal-trigger">Nueva <i class="right material-icons">add</i></a>
+          </li>
+        {{/if}}
         {{!-- <li class="divider"></li> --}}
         {{!-- <li>{{link-to 'Admin' 'admin'}}</li> --}}
         <li class="divider"></li>
@@ -48,6 +52,12 @@
         </li>
         <li class="divider"></li>
       </ul>
+      <div class="row">
+        <br>
+        <div class="center-align">
+          <img class="sidenav-img" src="/assets/img/book-logo.png" {{action 'redirectHome'}}>
+        </div>
+      </div>
     </div>
     <a href="#" data-activates="slide-out" class="button-collapse right"><i class="left mdi-navigation-menu"></i></a>
   </nav>
@@ -55,6 +65,33 @@
 
 
   {{outlet}}
+
+
+<!-- Modal Trigger -->
+
+  <!-- Modal Structure -->
+  <div id="modalNuevaEntrada" class="modal modalNuevaEntrada">
+    <div class="modal-content">
+      <h4><i class="material-icons">add</i> Compartir </h4>
+      <br>
+      <p>
+        <form>
+          <div class="input-field col s6">
+          {{input placeholder="Escribe aquí tu frase" id="dicho" type="text" class="validate" autofocus="true" value=model.frase}}
+          <label for="dicho">Dicho familiar</label>
+
+          <div class="input-field col s4">
+          {{input placeholder="Autor" id="autor" type="text" class="validate" value=model.author}}
+        </div>
+        </div>
+        </form>
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a class="waves-effect waves-green btn-flat green lighten-2 hoverable" {{action 'sendNewEntry'}}>¡Enviar!</a>
+      <a class="waves-effect waves-red btn-flat" {{action 'closeNewEntryModal'}}>Salir</a>
+    </div>
+  </div>
 
 
 <!--
@@ -77,7 +114,7 @@
       $('.lean-overlay').remove();
     } // Callback for Modal close
   });
--->
+
 <div id="yesNoModal" class="modal">
   <div class="modal-content">
     <h4>Are you sure?</h4>
@@ -89,7 +126,7 @@
     <a class="hide modal-action modal-close waves-effect waves-red btn-flat">No</a>
   </div>
 </div>
-
+-->
 
 <script type="text/javascript">
   $(document).ready(function(){
@@ -112,6 +149,9 @@
         alignment: 'left' // Displays dropdown with edge aligned to the left of button
       }
     );
+
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
 
     // Modal config
     // $('.modal-trigger').leanModal();

@@ -21,6 +21,13 @@ define('flamestack/routes/application', ['exports', 'ember'], function (exports,
       });
     },
 
+    model: function model() {
+      return {
+        frase: '',
+        author: ''
+      };
+    },
+
     actions: {
 
       signIn: function signIn(provider) {
@@ -77,6 +84,31 @@ define('flamestack/routes/application', ['exports', 'ember'], function (exports,
         };
         var currPath = this.router.currentRouteName;
         Flamestack.__container__.lookup('controller:' + currPath).set('modalAnswer', data);
+      },
+
+      /* FRASES - WEB SPECIFIC ACTIONS */
+
+      closeNewEntryModal: function closeNewEntryModal() {
+        var clearModel = {
+          frase: '',
+          author: ''
+        };
+        this.controllerFor('application').set('model', clearModel);
+        $('#modalNuevaEntrada').closeModal();
+      },
+
+      sendNewEntry: function sendNewEntry() {
+        var dateNow = new Date();
+        dateNow = dateNow.getTime();
+        var dataObj = {
+          user: this.get('session.currentUser'),
+          frase: this.controllerFor('application').get('model.frase'),
+          author: this.controllerFor('application').get('model.author'),
+          date: dateNow
+        };
+        this.Data.pushData('publicRef', ['frases'], dataObj).then(function (data) {
+          $('#modalNuevaEntrada').closeModal();
+        });
       }
     }
   });

@@ -84,7 +84,6 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         var el5 = dom.createTextNode("\n        ");
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("div");
-        dom.setAttribute(el5,"id","pulseClick1");
         dom.setAttribute(el5,"class","col s12 m4");
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
@@ -95,6 +94,7 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         var el7 = dom.createElement("h2");
         dom.setAttribute(el7,"class","center red-text");
         var el8 = dom.createElement("i");
+        dom.setAttribute(el8,"id","pulseClick1");
         dom.setAttribute(el8,"class","material-icons large");
         var el9 = dom.createTextNode("flash_on");
         dom.appendChild(el8, el9);
@@ -123,7 +123,6 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         var el5 = dom.createTextNode("\n\n        ");
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("div");
-        dom.setAttribute(el5,"id","pulseClick2");
         dom.setAttribute(el5,"class","col s12 m4");
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
@@ -134,6 +133,7 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         var el7 = dom.createElement("h2");
         dom.setAttribute(el7,"class","center green-text");
         var el8 = dom.createElement("i");
+        dom.setAttribute(el8,"id","pulseClick2");
         dom.setAttribute(el8,"class","material-icons large");
         var el9 = dom.createTextNode("group");
         dom.appendChild(el8, el9);
@@ -162,7 +162,6 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         var el5 = dom.createTextNode("\n\n        ");
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("div");
-        dom.setAttribute(el5,"id","pulseClick3");
         dom.setAttribute(el5,"class","col s12 m4");
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
@@ -173,6 +172,7 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         var el7 = dom.createElement("h2");
         dom.setAttribute(el7,"class","center orange-text");
         var el8 = dom.createElement("i");
+        dom.setAttribute(el8,"id","pulseClick3");
         dom.setAttribute(el8,"class","material-icons large");
         var el9 = dom.createTextNode("settings");
         dom.appendChild(el8, el9);
@@ -410,17 +410,28 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var element0 = dom.childAt(fragment, [0, 1, 1]);
-        var element1 = dom.childAt(element0, [1]);
-        var element2 = dom.childAt(element0, [3]);
-        var morphs = new Array(2);
-        morphs[0] = dom.createElementMorph(element1);
-        morphs[1] = dom.createElementMorph(element2);
+        var element0 = dom.childAt(fragment, [0]);
+        var element1 = dom.childAt(element0, [1, 1]);
+        var element2 = dom.childAt(element1, [1]);
+        var element3 = dom.childAt(element1, [3]);
+        var element4 = dom.childAt(element0, [3, 1, 3]);
+        var element5 = dom.childAt(element4, [1, 1, 1, 0]);
+        var element6 = dom.childAt(element4, [3, 1, 1, 0]);
+        var element7 = dom.childAt(element4, [5, 1, 1, 0]);
+        var morphs = new Array(5);
+        morphs[0] = dom.createElementMorph(element2);
+        morphs[1] = dom.createElementMorph(element3);
+        morphs[2] = dom.createElementMorph(element5);
+        morphs[3] = dom.createElementMorph(element6);
+        morphs[4] = dom.createElementMorph(element7);
         return morphs;
       },
       statements: [
         ["element","action",["focus","jumpTitle","bounce","slow"],[],["loc",[null,[6,70],[6,116]]]],
-        ["element","action",["focus","jumpRow","swing","slow"],[],["loc",[null,[7,43],[7,86]]]]
+        ["element","action",["focus","jumpRow","swing","slow"],[],["loc",[null,[7,43],[7,86]]]],
+        ["element","action",["focus","pulseClick1","flash"],[],["loc",[null,[22,89],[22,129]]]],
+        ["element","action",["focus","pulseClick2","jello","slow"],[],["loc",[null,[31,91],[31,138]]]],
+        ["element","action",["focus","pulseClick3","bounce"],[],["loc",[null,[40,92],[40,133]]]]
       ],
       locals: [],
       templates: []

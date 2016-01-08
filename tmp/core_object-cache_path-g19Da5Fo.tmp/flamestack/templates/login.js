@@ -54,7 +54,7 @@ define('flamestack/templates/login', ['exports'], function (exports) {
         var el4 = dom.createTextNode("\n        ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("a");
-        dom.setAttribute(el4,"class","waves-effect waves-light btn-large valign-wrapper full-width blue lighten-1");
+        dom.setAttribute(el4,"class","waves-effect waves-light btn-large valign-wrapper full-width green lighten-1");
         var el5 = dom.createTextNode("\n          ");
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("img");
@@ -112,7 +112,7 @@ define('flamestack/templates/login', ['exports'], function (exports) {
         var el4 = dom.createTextNode("\n        ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("a");
-        dom.setAttribute(el4,"class","waves-effect waves-light btn-large valign-wrapper full-width blue lighten-1");
+        dom.setAttribute(el4,"class","waves-effect waves-light btn-large valign-wrapper full-width light-blue lighten-1");
         var el5 = dom.createTextNode("\n          ");
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("img");
@@ -141,7 +141,7 @@ define('flamestack/templates/login', ['exports'], function (exports) {
         var el4 = dom.createTextNode("\n        ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("a");
-        dom.setAttribute(el4,"class","waves-effect waves-light btn-large valign-wrapper full-width blue lighten-1");
+        dom.setAttribute(el4,"class","waves-effect waves-light btn-large valign-wrapper full-width red lighten-1");
         var el5 = dom.createTextNode("\n          ");
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("img");
@@ -213,10 +213,10 @@ define('flamestack/templates/login', ['exports'], function (exports) {
       },
       statements: [
         ["inline","t",["login.required"],[],["loc",[null,[9,10],[9,32]]]],
-        ["element","action",["signIn","github"],[],["loc",[null,[10,95],[10,123]]]],
+        ["element","action",["signIn","github"],[],["loc",[null,[10,96],[10,124]]]],
         ["element","action",["signIn","facebook"],[],["loc",[null,[16,95],[16,125]]]],
-        ["element","action",["signIn","twitter"],[],["loc",[null,[22,95],[22,124]]]],
-        ["element","action",["signIn","google"],[],["loc",[null,[28,95],[28,123]]]]
+        ["element","action",["signIn","twitter"],[],["loc",[null,[22,101],[22,130]]]],
+        ["element","action",["signIn","google"],[],["loc",[null,[28,94],[28,122]]]]
       ],
       locals: [],
       templates: []

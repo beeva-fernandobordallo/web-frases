@@ -55,7 +55,7 @@ define('flamestack/templates/loading', ['exports'], function (exports) {
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("img");
-        dom.setAttribute(el4,"src","/assets/loaders/477.GIF");
+        dom.setAttribute(el4,"src","/assets/loaders/382.GIF");
         dom.setAttribute(el4,"height","80");
         dom.setAttribute(el4,"width","80");
         dom.appendChild(el3, el4);

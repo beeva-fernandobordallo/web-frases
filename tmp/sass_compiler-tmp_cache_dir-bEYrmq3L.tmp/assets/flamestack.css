@@ -8313,6 +8313,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   margin-right: 20px;
   margin-top: 10px; }
 
+.sidenav-img {
+  width: 50px; }
+
 .anim-slow {
   -moz-animation-duration: 0.8s;
   -o-animation-duration: 0.8s;

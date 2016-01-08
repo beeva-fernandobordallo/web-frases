@@ -3,6 +3,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
+  
   beforeModel: function(transition) {
 
     this.set('i18n.locale', 'es');
@@ -20,6 +21,13 @@ export default Ember.Route.extend({
     });
 
   },
+
+  model: function(){
+    return {
+      frase: '',
+      author: ''
+    } 
+  },  
 
   actions: {
 
@@ -77,6 +85,33 @@ export default Ember.Route.extend({
       };
       var currPath = this.router.currentRouteName;
       Flamestack.__container__.lookup('controller:' + currPath).set('modalAnswer', data);
+    },
+
+
+
+    /* FRASES - WEB SPECIFIC ACTIONS */
+
+    closeNewEntryModal: function(){
+      var clearModel = {
+        frase: '',
+        author: ''
+      };
+      this.controllerFor('application').set('model', clearModel);
+      $('#modalNuevaEntrada').closeModal();
+    },
+
+    sendNewEntry: function(){
+      var dateNow = new Date();
+      dateNow = dateNow.getTime();
+      var dataObj = {
+        user: this.get('session.currentUser'),
+        frase: this.controllerFor('application').get('model.frase'),
+        author: this.controllerFor('application').get('model.author'),
+        date: dateNow
+      }
+      this.Data.pushData('publicRef', ['frases'], dataObj).then(function(data){
+        $('#modalNuevaEntrada').closeModal();
+      });
     }
   }
 });
