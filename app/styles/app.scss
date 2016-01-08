@@ -1,0 +1,116 @@
+@import 'materialize';
+@import 'ember-cli-materialize';
+
+// Brand image - found in the toolbar
+.logo-image{
+  width:35px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 3px;
+  margin-right: 8px;
+}
+
+.brand-logo{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.lang-icon{
+  text-align: center;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+
+// ANIMATIONS
+
+.anim-slow{
+  -moz-animation-duration: 0.8s;
+  -o-animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+  -ms-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+
+.anim-normal{
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -ms-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.anim-fast{
+  -moz-animation-duration: 0.4s;
+  -o-animation-duration: 0.4s;
+  -webkit-animation-duration: 0.4s;
+  -ms-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+
+
+
+
+// GENERAL RULES
+
+.bottom-marg{
+  margin-bottom: 8px;
+}
+
+.bottom-pad{
+  padding-bottom: 8px;
+}
+
+.top-marg{
+  margin-top: 8px;
+}
+
+.top-pad{
+  padding-top: 8px;
+}
+
+.full-width{
+  width:100%;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+
+
+// NO PAGE FOUND
+
+.no-page-found{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('/assets/img/404/bg.png');
+}
+
+.no-page-found .veil{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(13, 71, 161, 0.3);
+}
+
+.no-page-label{
+  background-image: url('/assets/img/404/label.png');
+  z-index: 10;
+  position: relative;
+  width:260px;
+  height: 220px;
+  top: 50px;
+}
+
+
+// -- focus
+
+.block-focus-border{
+  border: 1px solid #bdbdbd;
+}
