@@ -1,0 +1,1 @@
+/home/fernandobordallo/cli/web-frases/tmp/funnel-input_base_path-xvRZta8f.tmp/0/components/ember-wormhole.js

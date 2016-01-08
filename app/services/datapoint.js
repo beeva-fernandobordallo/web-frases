@@ -22,7 +22,7 @@ export default Ember.Service.extend({
 
 
   // Datapoint variables
-  firebase: 'https://cfmcom.firebaseio.com',
+  firebase: 'https://dichos-familiares.firebaseio.com',
   baseRef: '',
   userRef: '',
   publicRef: '',

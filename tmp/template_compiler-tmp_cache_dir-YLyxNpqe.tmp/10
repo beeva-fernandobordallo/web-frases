@@ -1,0 +1,574 @@
+export default Ember.HTMLBars.template((function() {
+  var child0 = (function() {
+    return {
+      meta: {
+        "revision": "Ember@2.0.0",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 20,
+            "column": 8
+          },
+          "end": {
+            "line": 22,
+            "column": 8
+          }
+        },
+        "moduleName": "flamestack/templates/application.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("          ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("a");
+        var el2 = dom.createTextNode("Sign out");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element1 = dom.childAt(fragment, [1]);
+        var morphs = new Array(1);
+        morphs[0] = dom.createElementMorph(element1);
+        return morphs;
+      },
+      statements: [
+        ["element","action",["signOut"],[],["loc",[null,[21,13],[21,33]]]]
+      ],
+      locals: [],
+      templates: []
+    };
+  }());
+  var child1 = (function() {
+    var child0 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@2.0.0",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 23,
+              "column": 10
+            },
+            "end": {
+              "line": 25,
+              "column": 10
+            }
+          },
+          "moduleName": "flamestack/templates/application.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("            ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment,1,1,contextualElement);
+          return morphs;
+        },
+        statements: [
+          ["inline","t",["label.signIn"],[],["loc",[null,[24,12],[24,32]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
+    return {
+      meta: {
+        "revision": "Ember@2.0.0",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 22,
+            "column": 8
+          },
+          "end": {
+            "line": 26,
+            "column": 8
+          }
+        },
+        "moduleName": "flamestack/templates/application.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(1);
+        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
+        dom.insertBoundary(fragment, null);
+        return morphs;
+      },
+      statements: [
+        ["block","link-to",["login"],[],0,null,["loc",[null,[23,10],[25,22]]]]
+      ],
+      locals: [],
+      templates: [child0]
+    };
+  }());
+  var child2 = (function() {
+    return {
+      meta: {
+        "revision": "Ember@2.0.0",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 41,
+            "column": 10
+          },
+          "end": {
+            "line": 43,
+            "column": 10
+          }
+        },
+        "moduleName": "flamestack/templates/application.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("            ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("a");
+        var el2 = dom.createTextNode("Sign out");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element0 = dom.childAt(fragment, [1]);
+        var morphs = new Array(1);
+        morphs[0] = dom.createElementMorph(element0);
+        return morphs;
+      },
+      statements: [
+        ["element","action",["signOut"],[],["loc",[null,[42,15],[42,35]]]]
+      ],
+      locals: [],
+      templates: []
+    };
+  }());
+  var child3 = (function() {
+    var child0 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@2.0.0",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 44,
+              "column": 12
+            },
+            "end": {
+              "line": 46,
+              "column": 12
+            }
+          },
+          "moduleName": "flamestack/templates/application.hbs"
+        },
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("              ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment,1,1,contextualElement);
+          return morphs;
+        },
+        statements: [
+          ["inline","t",["label.signIn"],[],["loc",[null,[45,14],[45,34]]]]
+        ],
+        locals: [],
+        templates: []
+      };
+    }());
+    return {
+      meta: {
+        "revision": "Ember@2.0.0",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 43,
+            "column": 10
+          },
+          "end": {
+            "line": 47,
+            "column": 10
+          }
+        },
+        "moduleName": "flamestack/templates/application.hbs"
+      },
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(1);
+        morphs[0] = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, 0);
+        dom.insertBoundary(fragment, null);
+        return morphs;
+      },
+      statements: [
+        ["block","link-to",["login"],[],0,null,["loc",[null,[44,12],[46,24]]]]
+      ],
+      locals: [],
+      templates: [child0]
+    };
+  }());
+  return {
+    meta: {
+      "revision": "Ember@2.0.0",
+      "loc": {
+        "source": null,
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 132,
+          "column": 0
+        }
+      },
+      "moduleName": "flamestack/templates/application.hbs"
+    },
+    arity: 0,
+    cachedFragment: null,
+    hasRendered: false,
+    buildFragment: function buildFragment(dom) {
+      var el0 = dom.createDocumentFragment();
+      var el1 = dom.createElement("div");
+      dom.setAttribute(el1,"class","navbar-fixed");
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("nav");
+      dom.setAttribute(el2,"class","amber darken-2");
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("div");
+      dom.setAttribute(el3,"class","brand-logo thin");
+      var el4 = dom.createTextNode("\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("div");
+      dom.setAttribute(el4,"class","valign-wrapper");
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("img");
+      dom.setAttribute(el5,"class","logo-image");
+      dom.setAttribute(el5,"src","/assets/img/fire-logo.png");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("span");
+      dom.setAttribute(el5,"class","hide-on-small-only");
+      var el6 = dom.createTextNode("Dichos Familiares");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("span");
+      dom.setAttribute(el5,"class","hide-on-med-and-up");
+      var el6 = dom.createTextNode("Dichos Familiares");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n      ");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("      ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createComment(" Dropdown Structure ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n      ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("ul");
+      dom.setAttribute(el3,"id","dropdown1");
+      dom.setAttribute(el3,"class","dropdown-content");
+      var el4 = dom.createTextNode("\n        ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("li");
+      var el5 = dom.createElement("a");
+      dom.setAttribute(el5,"class","amber-text text-darken-4");
+      var el6 = dom.createComment("");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n        ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("li");
+      dom.setAttribute(el4,"class","divider");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n        ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("li");
+      var el5 = dom.createElement("a");
+      dom.setAttribute(el5,"class","amber-text text-darken-4");
+      var el6 = dom.createComment("");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n      ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("ul");
+      dom.setAttribute(el3,"class","right hide-on-med-and-down");
+      var el4 = dom.createTextNode("\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("li");
+      var el5 = dom.createTextNode("\n");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createComment("");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("      ");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("div");
+      dom.setAttribute(el3,"id","slide-out");
+      dom.setAttribute(el3,"class","side-nav");
+      var el4 = dom.createTextNode("\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("div");
+      dom.setAttribute(el4,"class","row");
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("br");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("div");
+      dom.setAttribute(el5,"class","center-align");
+      var el6 = dom.createTextNode("\n          ");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createElement("img");
+      dom.setAttribute(el6,"class","responsive-img");
+      dom.setAttribute(el6,"src","/assets/img/fire-logo.png");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createTextNode("\n        ");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n      ");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("ul");
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("li");
+      dom.setAttribute(el5,"class","divider");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("li");
+      var el6 = dom.createComment("");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("li");
+      dom.setAttribute(el5,"class","divider");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("li");
+      var el6 = dom.createTextNode("\n");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createComment("");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createTextNode("        ");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("li");
+      dom.setAttribute(el5,"class","divider");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n      ");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("a");
+      dom.setAttribute(el3,"href","#");
+      dom.setAttribute(el3,"data-activates","slide-out");
+      dom.setAttribute(el3,"class","button-collapse right");
+      var el4 = dom.createElement("i");
+      dom.setAttribute(el4,"class","left mdi-navigation-menu");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n  ");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n");
+      dom.appendChild(el1, el2);
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("\n\n\n  ");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createComment("");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("\n\n\n");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createComment("\n  General use Yes/No modal\n\n  Button:\n  <a class=\"waves-effect waves-light btn modal-trigger\" href=\"#yesNoModal\">Modal</a>\n\n  Initialization:\n  // Modal config\n  $('.modal-trigger').leanModal();\n  $('.modal-trigger').leanModal({\n    dismissible: false, // Modal can be dismissed by clicking outside of the modal\n    opacity: .5, // Opacity of modal background\n    in_duration: 400, // Transition in duration\n    out_duration: 250, // Transition out duration\n\n    //ready: function() { alert('Ready'); }, // Callback for Modal open\n    complete: function() {\n      $('.lean-overlay').remove();\n    } // Callback for Modal close\n  });\n");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("\n");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createElement("div");
+      dom.setAttribute(el1,"id","yesNoModal");
+      dom.setAttribute(el1,"class","modal");
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("div");
+      dom.setAttribute(el2,"class","modal-content");
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("h4");
+      var el4 = dom.createTextNode("Are you sure?");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("p");
+      var el4 = dom.createTextNode("Please confirm your action");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n  ");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("div");
+      dom.setAttribute(el2,"class","modal-footer");
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("a");
+      dom.setAttribute(el3,"class","waves-effect waves-green btn-flat");
+      var el4 = dom.createTextNode("Yes");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("a");
+      dom.setAttribute(el3,"class","waves-effect waves-red btn-flat");
+      var el4 = dom.createTextNode("No");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("a");
+      dom.setAttribute(el3,"class","hide modal-action modal-close waves-effect waves-red btn-flat");
+      var el4 = dom.createTextNode("No");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n  ");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n");
+      dom.appendChild(el1, el2);
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("\n\n\n");
+      dom.appendChild(el0, el1);
+      var el1 = dom.createElement("script");
+      dom.setAttribute(el1,"type","text/javascript");
+      var el2 = dom.createTextNode("\n  $(document).ready(function(){\n\n    //Side nav config\n    $(\".button-collapse\").sideNav({\n      menuWidth: 220, // Default is 240\n      edge: 'right', // Choose the horizontal origin\n      closeOnClick: true // Closes side-nav on link clicks, useful for Angular/Meteor\n    });\n\n    //Language dropdown config\n    $('.dropdown-button').dropdown({\n        inDuration: 300,\n        outDuration: 225,\n        constrain_width: false, // Does not change width of dropdown to that of the activator\n        hover: false, // Activate on hover\n        gutter: 0, // Spacing from edge\n        belowOrigin: true, // Displays dropdown below the button\n        alignment: 'left' // Displays dropdown with edge aligned to the left of button\n      }\n    );\n\n    // Modal config\n    // $('.modal-trigger').leanModal();\n    // $('.modal-trigger').leanModal({\n    //   dismissible: false, // Modal can be dismissed by clicking outside of the modal\n    //   opacity: .5, // Opacity of modal background\n    //   in_duration: 400, // Transition in duration\n    //   out_duration: 250, // Transition out duration\n\n      //ready: function() { alert('Ready'); }, // Callback for Modal open\n    //   complete: function() {\n    //     $('.lean-overlay').remove();\n    //   } // Callback for Modal close\n    // }\n  // );\n  });\n");
+      dom.appendChild(el1, el2);
+      dom.appendChild(el0, el1);
+      var el1 = dom.createTextNode("\n");
+      dom.appendChild(el0, el1);
+      return el0;
+    },
+    buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+      var element2 = dom.childAt(fragment, [0, 1]);
+      var element3 = dom.childAt(element2, [1, 1]);
+      var element4 = dom.childAt(element2, [6]);
+      var element5 = dom.childAt(element4, [1, 0]);
+      var element6 = dom.childAt(element4, [5, 0]);
+      var element7 = dom.childAt(element2, [10]);
+      var element8 = dom.childAt(element7, [1, 3, 1]);
+      var element9 = dom.childAt(element7, [3]);
+      var element10 = dom.childAt(fragment, [6, 3]);
+      var element11 = dom.childAt(element10, [1]);
+      var element12 = dom.childAt(element10, [3]);
+      var morphs = new Array(12);
+      morphs[0] = dom.createElementMorph(element3);
+      morphs[1] = dom.createElementMorph(element5);
+      morphs[2] = dom.createMorphAt(element5,0,0);
+      morphs[3] = dom.createElementMorph(element6);
+      morphs[4] = dom.createMorphAt(element6,0,0);
+      morphs[5] = dom.createMorphAt(dom.childAt(element2, [8, 1]),1,1);
+      morphs[6] = dom.createElementMorph(element8);
+      morphs[7] = dom.createMorphAt(dom.childAt(element9, [3]),0,0);
+      morphs[8] = dom.createMorphAt(dom.childAt(element9, [7]),1,1);
+      morphs[9] = dom.createMorphAt(fragment,2,2,contextualElement);
+      morphs[10] = dom.createElementMorph(element11);
+      morphs[11] = dom.createElementMorph(element12);
+      return morphs;
+    },
+    statements: [
+      ["element","action",["redirectHome"],[],["loc",[null,[4,34],[4,59]]]],
+      ["element","action",["setLocale","en"],[],["loc",[null,[14,48],[14,75]]]],
+      ["inline","t",["lang.english"],[],["loc",[null,[14,76],[14,96]]]],
+      ["element","action",["setLocale","es"],[],["loc",[null,[16,48],[16,75]]]],
+      ["inline","t",["lang.spanish"],[],["loc",[null,[16,76],[16,96]]]],
+      ["block","if",[["get","session.isAuthenticated",["loc",[null,[20,14],[20,37]]]]],[],0,1,["loc",[null,[20,8],[26,15]]]],
+      ["element","action",["redirectHome"],[],["loc",[null,[33,70],[33,95]]]],
+      ["inline","link-to",["Admin","admin"],[],["loc",[null,[38,12],[38,39]]]],
+      ["block","if",[["get","session.isAuthenticated",["loc",[null,[41,16],[41,39]]]]],[],2,3,["loc",[null,[41,10],[47,17]]]],
+      ["content","outlet",["loc",[null,[57,2],[57,12]]]],
+      ["element","action",["yesToModal"],[],["loc",[null,[87,49],[87,72]]]],
+      ["element","action",["noToModal"],[],["loc",[null,[88,47],[88,69]]]]
+    ],
+    locals: [],
+    templates: [child0, child1, child2, child3]
+  };
+}()));

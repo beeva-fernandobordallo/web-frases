@@ -1,0 +1,1 @@
+/home/fernandobordallo/cli/web-frases/tmp/simple_replace-tmp_cache_dir-ygIkQ7PS.tmp/0

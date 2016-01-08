@@ -1,0 +1,1 @@
+/home/fernandobordallo/cli/web-frases/tmp/funnel-input_base_path-COC6VrUO.tmp/0/bower_components/ember-cli-test-loader/test-loader.js

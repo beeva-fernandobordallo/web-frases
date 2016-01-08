@@ -1,26 +1,21 @@
 <div class="navbar-fixed">
-  <nav class="blue darken-2">
+  <nav class="teal darken-2">
     <div class="brand-logo thin">
       <div class="valign-wrapper" {{action 'redirectHome'}}>
-        <img class="logo-image" src="/assets/img/fire-logo.png">
-        <span class="hide-on-small-only">Flame Stack</span>
-        <span class="hide-on-med-and-up">Flame/St</span>
+        <img class="logo-image" src="/assets/img/book-logo.png">
+        <span class="hide-on-small-only">Dichos Familiares</span>
+        <span class="hide-on-med-and-up">Dichos Familiares</span>
       </div>
     </div>
-    <i class="dropdown-button material-icons right lang-icon pointer" data-activates='dropdown1' style="
-    font-size: 40px;">language</i>
+    {{!-- <i class="dropdown-button material-icons right lang-icon pointer" data-activates='dropdown1' style="
+    font-size: 40px;">language</i> --}}
       <!-- Dropdown Structure -->
       <ul id='dropdown1' class='dropdown-content'>
-        <li><a class="blue-text text-darken-4" {{action 'setLocale' 'en'}}>{{t 'lang.english'}}</a></li>
+        <li><a class="teal-text text-darken-4" {{action 'setLocale' 'en'}}>{{t 'lang.english'}}</a></li>
         <li class="divider"></li>
-        <li><a class="blue-text text-darken-4" {{action 'setLocale' 'es'}}>{{t 'lang.spanish'}}</a></li>
+        <li><a class="teal-text text-darken-4" {{action 'setLocale' 'es'}}>{{t 'lang.spanish'}}</a></li>
       </ul>
     <ul class="right hide-on-med-and-down">
-      <li>
-        {{#link-to 'admin'}}
-          <span>Admin</span>
-        {{/link-to}}
-      </li>
       <li>
         {{#if session.isAuthenticated}}
           <a {{action "signOut"}}>Sign out</a>
@@ -39,8 +34,8 @@
         </div>
       </div>
       <ul>
-        <li class="divider"></li>
-        <li>{{link-to 'Admin' 'admin'}}</li>
+        {{!-- <li class="divider"></li> --}}
+        {{!-- <li>{{link-to 'Admin' 'admin'}}</li> --}}
         <li class="divider"></li>
         <li>
           {{#if session.isAuthenticated}}

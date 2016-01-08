@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 
   beforeModel: function(transition) {
 
-    this.set('i18n.locale', navigator.language || navigator.userLanguage || 'es');
+    this.set('i18n.locale', 'es');
 
     // Initialize the datapoint
     return this.Data.initialize(transition).then(function(){

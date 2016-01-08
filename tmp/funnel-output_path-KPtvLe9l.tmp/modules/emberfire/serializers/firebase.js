@@ -1,0 +1,1 @@
+/home/fernandobordallo/cli/web-frases/tmp/funnel-input_base_path-mACnc4kK.tmp/0/serializers/firebase.js

@@ -1,0 +1,87 @@
+define('torii/session/state-machine', ['exports', 'torii/lib/state-machine'], function (exports, StateMachine) {
+
+  'use strict';
+
+  var transitionTo = StateMachine['default'].transitionTo;
+
+  function copyProperties(data, target) {
+    for (var key in data) {
+      if (data.hasOwnProperty(key)) {
+        target[key] = data[key];
+      }
+    }
+  }
+
+  function transitionToClearing(target, propertiesToClear) {
+    return function(){
+      for (var i;i<propertiesToClear.length;i++) {
+        this[propertiesToClear[i]] = null;
+      }
+      this.transitionTo(target);
+    };
+  }
+
+  exports['default'] = function(session){
+    var sm = new StateMachine['default']({
+      initialState: 'unauthenticated',
+
+      states: {
+        unauthenticated: {
+          errorMessage: null,
+          isAuthenticated: false,
+          // Actions
+          startOpen: transitionToClearing('opening', ['errorMessage']),
+          startFetch: transitionToClearing('fetching', ['errorMessage'])
+        },
+        authenticated: {
+          // Properties
+          currentUser: null,
+          isAuthenticated: true,
+          startClose: transitionTo('closing')
+        },
+        opening: {
+          isWorking: true,
+          isOpening: true,
+          // Actions
+          finishOpen: function(data){
+            copyProperties(data, this.states['authenticated']);
+            this.transitionTo('authenticated');
+          },
+          failOpen: function(errorMessage){
+            this.states['unauthenticated'].errorMessage = errorMessage;
+            this.transitionTo('unauthenticated');
+          }
+        },
+        fetching: {
+          isWorking: true,
+          isFetching: true,
+          // Actions
+          finishFetch: function(data){
+            copyProperties(data, this.states['authenticated']);
+            this.transitionTo('authenticated');
+          },
+          failFetch: function(errorMessage){
+            this.states['unauthenticated'].errorMessage = errorMessage;
+            this.transitionTo('unauthenticated');
+          }
+        },
+        closing: {
+          isWorking: true,
+          isClosing: true,
+          isAuthenticated: true,
+          // Actions
+          finishClose: function(){
+            this.transitionTo('unauthenticated');
+          },
+          failClose: function(errorMessage){
+            this.states['unauthenticated'].errorMessage = errorMessage;
+            this.transitionTo('unauthenticated');
+          }
+        }
+      }
+    });
+    sm.session = session;
+    return sm;
+  }
+
+});
