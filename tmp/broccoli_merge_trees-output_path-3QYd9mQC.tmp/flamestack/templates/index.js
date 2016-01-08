@@ -1,1 +1,1 @@
-/home/fernandobordallo/cli/web-frases/tmp/template_compiler-tmp_cache_dir-YLyxNpqe.tmp/66
+/home/fernandobordallo/cli/web-frases/tmp/broccoli_merge_trees-input_base_path-Ovn4OdcH.tmp/2/flamestack/templates/index.js

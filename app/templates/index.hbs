@@ -22,7 +22,19 @@
             <h2 class="center red-text"><i id="pulseClick1" class="material-icons large" {{action 'focus' 'pulseClick1' 'flash'}}>flash_on</i></h2>
             <h5 class="center">Top 5</h5>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            <p class="light">
+                          </p>
+            <ul class="collection">
+              {{#each model as |item|}}
+                <li class="collection-item">
+                  <h5 class="thin">{{item.frase}}</h5>
+                  <small><i>{{item.author}}</i></small>
+                  <div class="right">
+                    {{item.votos}} <i class="material-icons">thumb_up</i>
+                  </div>
+                </li>
+              {{/each}}
+            </ul>
           </div>
         </div>
 

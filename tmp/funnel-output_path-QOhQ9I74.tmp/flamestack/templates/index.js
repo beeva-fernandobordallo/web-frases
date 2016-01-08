@@ -1,1 +1,1 @@
-/home/fernandobordallo/cli/web-frases/tmp/template_compiler-tmp_cache_dir-YLyxNpqe.tmp/66
+/home/fernandobordallo/cli/web-frases/tmp/template_compiler-tmp_dest_dir-Nei3gRTz.tmp/flamestack/templates/index.js

@@ -108,11 +108,25 @@ export default Ember.Route.extend({
         userImg: this.get('session.currentUser.profileImageURL'),
         frase: this.controllerFor('application').get('model.frase'),
         author: this.controllerFor('application').get('model.author'),
-        date: dateNow
+        date: dateNow,
+        votos: 0
       }
       this.Data.pushData('publicRef', ['frases'], dataObj).then(function(data){
+        if(this.Data.get('frasesData') !== null){
+          this.Data.get('frasesData').push(dataObj);
+        }else{
+          this.Data.set('frasesData', [dataObj]);
+        }
+
+        var clearModel = {
+          frase: '',
+          author: ''
+        };
+        this.controllerFor('application').set('model', clearModel);
+
         $('#modalNuevaEntrada').closeModal();
-      });
+        this.Toast.addToast('Lección de vida compartida', 2000);
+      }.bind(this));
     }
   }
 });

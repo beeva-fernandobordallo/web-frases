@@ -3,6 +3,89 @@ define('flamestack/templates/index', ['exports'], function (exports) {
   'use strict';
 
   exports['default'] = Ember.HTMLBars.template((function() {
+    var child0 = (function() {
+      return {
+        meta: {
+          "revision": "Ember@2.0.0",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 28,
+              "column": 14
+            },
+            "end": {
+              "line": 36,
+              "column": 14
+            }
+          },
+          "moduleName": "flamestack/templates/index.hbs"
+        },
+        arity: 1,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("                ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("li");
+          dom.setAttribute(el1,"class","collection-item");
+          var el2 = dom.createTextNode("\n                  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("h5");
+          dom.setAttribute(el2,"class","thin");
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n                  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("small");
+          var el3 = dom.createElement("i");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n                  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2,"class","right");
+          var el3 = dom.createTextNode("\n                    ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode(" ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("i");
+          dom.setAttribute(el3,"class","material-icons");
+          var el4 = dom.createTextNode("thumb_up");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n                  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n                ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var element0 = dom.childAt(fragment, [1]);
+          var morphs = new Array(3);
+          morphs[0] = dom.createMorphAt(dom.childAt(element0, [1]),0,0);
+          morphs[1] = dom.createMorphAt(dom.childAt(element0, [3, 0]),0,0);
+          morphs[2] = dom.createMorphAt(dom.childAt(element0, [5]),1,1);
+          return morphs;
+        },
+        statements: [
+          ["content","item.frase",["loc",[null,[30,35],[30,49]]]],
+          ["content","item.author",["loc",[null,[31,28],[31,43]]]],
+          ["content","item.votos",["loc",[null,[33,20],[33,34]]]]
+        ],
+        locals: ["item"],
+        templates: []
+      };
+    }());
     return {
       meta: {
         "revision": "Ember@2.0.0",
@@ -13,7 +96,7 @@ define('flamestack/templates/index', ['exports'], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 93,
+            "line": 105,
             "column": 0
           }
         },
@@ -111,7 +194,18 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         dom.appendChild(el6, el7);
         var el7 = dom.createElement("p");
         dom.setAttribute(el7,"class","light");
-        var el8 = dom.createTextNode("We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.");
+        var el8 = dom.createTextNode("\n                          ");
+        dom.appendChild(el7, el8);
+        dom.appendChild(el6, el7);
+        var el7 = dom.createTextNode("\n            ");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createElement("ul");
+        dom.setAttribute(el7,"class","collection");
+        var el8 = dom.createTextNode("\n");
+        dom.appendChild(el7, el8);
+        var el8 = dom.createComment("");
+        dom.appendChild(el7, el8);
+        var el8 = dom.createTextNode("            ");
         dom.appendChild(el7, el8);
         dom.appendChild(el6, el7);
         var el7 = dom.createTextNode("\n          ");
@@ -410,31 +504,34 @@ define('flamestack/templates/index', ['exports'], function (exports) {
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var element0 = dom.childAt(fragment, [0]);
-        var element1 = dom.childAt(element0, [1, 1]);
-        var element2 = dom.childAt(element1, [1]);
-        var element3 = dom.childAt(element1, [3]);
-        var element4 = dom.childAt(element0, [3, 1, 3]);
-        var element5 = dom.childAt(element4, [1, 1, 1, 0]);
-        var element6 = dom.childAt(element4, [3, 1, 1, 0]);
-        var element7 = dom.childAt(element4, [5, 1, 1, 0]);
-        var morphs = new Array(5);
-        morphs[0] = dom.createElementMorph(element2);
-        morphs[1] = dom.createElementMorph(element3);
-        morphs[2] = dom.createElementMorph(element5);
-        morphs[3] = dom.createElementMorph(element6);
-        morphs[4] = dom.createElementMorph(element7);
+        var element1 = dom.childAt(fragment, [0]);
+        var element2 = dom.childAt(element1, [1, 1]);
+        var element3 = dom.childAt(element2, [1]);
+        var element4 = dom.childAt(element2, [3]);
+        var element5 = dom.childAt(element1, [3, 1, 3]);
+        var element6 = dom.childAt(element5, [1, 1]);
+        var element7 = dom.childAt(element6, [1, 0]);
+        var element8 = dom.childAt(element5, [3, 1, 1, 0]);
+        var element9 = dom.childAt(element5, [5, 1, 1, 0]);
+        var morphs = new Array(6);
+        morphs[0] = dom.createElementMorph(element3);
+        morphs[1] = dom.createElementMorph(element4);
+        morphs[2] = dom.createElementMorph(element7);
+        morphs[3] = dom.createMorphAt(dom.childAt(element6, [7]),1,1);
+        morphs[4] = dom.createElementMorph(element8);
+        morphs[5] = dom.createElementMorph(element9);
         return morphs;
       },
       statements: [
         ["element","action",["focus","jumpTitle","bounce","slow"],[],["loc",[null,[6,70],[6,116]]]],
         ["element","action",["focus","jumpRow","swing","slow"],[],["loc",[null,[7,43],[7,86]]]],
         ["element","action",["focus","pulseClick1","flash"],[],["loc",[null,[22,89],[22,129]]]],
-        ["element","action",["focus","pulseClick2","jello","slow"],[],["loc",[null,[31,91],[31,138]]]],
-        ["element","action",["focus","pulseClick3","bounce"],[],["loc",[null,[40,92],[40,133]]]]
+        ["block","each",[["get","model",["loc",[null,[28,22],[28,27]]]]],[],0,null,["loc",[null,[28,14],[36,23]]]],
+        ["element","action",["focus","pulseClick2","jello","slow"],[],["loc",[null,[43,91],[43,138]]]],
+        ["element","action",["focus","pulseClick3","bounce"],[],["loc",[null,[52,92],[52,133]]]]
       ],
       locals: [],
-      templates: []
+      templates: [child0]
     };
   }()));
 
