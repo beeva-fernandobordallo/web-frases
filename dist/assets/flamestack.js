@@ -5790,7 +5790,7 @@ catch(err) {
 if (runningTests) {
   require("flamestack/tests/test-helper");
 } else {
-  require("flamestack/app")["default"].create({"name":"flamestack","version":"0.0.0+71e40513"});
+  require("flamestack/app")["default"].create({"name":"flamestack","version":"0.0.0+b3c215d7"});
 }
 
 /* jshint ignore:end */
