@@ -104,7 +104,8 @@ export default Ember.Route.extend({
       var dateNow = new Date();
       dateNow = dateNow.getTime();
       var dataObj = {
-        user: this.get('session.currentUser'),
+        userName: this.get('session.currentUser.displayName'),
+        userImg: this.get('session.currentUser.profileImageURL'),
         frase: this.controllerFor('application').get('model.frase'),
         author: this.controllerFor('application').get('model.author'),
         date: dateNow

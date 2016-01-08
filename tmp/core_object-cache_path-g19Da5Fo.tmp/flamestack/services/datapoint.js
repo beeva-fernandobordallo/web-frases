@@ -391,6 +391,38 @@ define('flamestack/services/datapoint', ['exports', 'ember'], function (exports,
       return promise;
     },
 
+    pushData: function pushData(reference, childrenArray, data) {
+      var promise = new Promise((function (resolve, reject) {
+
+        //Get data switch FUNCTION
+        function pushFunction(self, ref, childArray, data) {
+          var promise = new Promise(function (resolve, reject) {
+            var instruction = '';
+            if (ref === null) {
+              ref = 'baseRef';
+            }
+            instruction = self.get(ref);
+
+            for (var i = 0; i < childArray.length; i++) {
+              instruction = instruction.child(childArray[i]);
+            }
+
+            instruction.push(data, function () {
+              resolve({ message: 'Data Pushed' });
+            });
+          });
+          return promise;
+        };
+
+        pushFunction(this, reference, childrenArray, data).then((function (dataGetResult) {
+          resolve(dataGetResult.message);
+        }).bind(this), (function (dataGetResult) {
+          reject(dataGetResult);
+        }).bind(this));
+      }).bind(this));
+      return promise;
+    },
+
     turnFireOff: function turnFireOff(reference, childrenArray) {
       var promise = new Promise((function (resolve, reject) {
 

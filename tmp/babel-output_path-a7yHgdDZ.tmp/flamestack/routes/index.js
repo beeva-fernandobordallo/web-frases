@@ -8,9 +8,9 @@ export default Base.extend({
     var filtersObj = {
       orderChild: 'votos'
     };
-    return this.Data.grabData('publicRef', [], 'frasesData', filtersObj).then(function (data) {
-      console.log(data);
-    });
+    return this.Data.grabData('publicRef', ['frases'], 'frasesData', filtersObj).then((function () {
+      return this.Data.get('frasesData');
+    }).bind(this));
   },
 
   actions: {

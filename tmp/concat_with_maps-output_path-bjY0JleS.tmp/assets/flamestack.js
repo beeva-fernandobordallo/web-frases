@@ -1920,7 +1920,8 @@ define('flamestack/routes/application', ['exports', 'ember'], function (exports,
         var dateNow = new Date();
         dateNow = dateNow.getTime();
         var dataObj = {
-          user: this.get('session.currentUser'),
+          userName: this.get('session.currentUser.displayName'),
+          userImg: this.get('session.currentUser.profileImageURL'),
           frase: this.controllerFor('application').get('model.frase'),
           author: this.controllerFor('application').get('model.author'),
           date: dateNow
@@ -2007,9 +2008,9 @@ define('flamestack/routes/index', ['exports', 'flamestack/routes/base'], functio
       var filtersObj = {
         orderChild: 'votos'
       };
-      return this.Data.grabData('publicRef', [], 'frasesData', filtersObj).then(function (data) {
-        console.log(data);
-      });
+      return this.Data.grabData('publicRef', ['frases'], 'frasesData', filtersObj).then((function () {
+        return this.Data.get('frasesData');
+      }).bind(this));
     },
 
     actions: {
@@ -2531,6 +2532,38 @@ define('flamestack/services/datapoint', ['exports', 'ember'], function (exports,
         };
 
         setFunction(this, reference, childrenArray, data).then((function (dataGetResult) {
+          resolve(dataGetResult.message);
+        }).bind(this), (function (dataGetResult) {
+          reject(dataGetResult);
+        }).bind(this));
+      }).bind(this));
+      return promise;
+    },
+
+    pushData: function pushData(reference, childrenArray, data) {
+      var promise = new Promise((function (resolve, reject) {
+
+        //Get data switch FUNCTION
+        function pushFunction(self, ref, childArray, data) {
+          var promise = new Promise(function (resolve, reject) {
+            var instruction = '';
+            if (ref === null) {
+              ref = 'baseRef';
+            }
+            instruction = self.get(ref);
+
+            for (var i = 0; i < childArray.length; i++) {
+              instruction = instruction.child(childArray[i]);
+            }
+
+            instruction.push(data, function () {
+              resolve({ message: 'Data Pushed' });
+            });
+          });
+          return promise;
+        };
+
+        pushFunction(this, reference, childrenArray, data).then((function (dataGetResult) {
           resolve(dataGetResult.message);
         }).bind(this), (function (dataGetResult) {
           reject(dataGetResult);
@@ -5409,7 +5442,7 @@ define('flamestack/tests/routes/application.jshint', function () {
   QUnit.module('JSHint - routes');
   QUnit.test('routes/application.js should pass jshint', function(assert) { 
     assert.expect(1);
-    assert.ok(false, 'routes/application.js should pass jshint.\nroutes/application.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/application.js: line 4, col 1, \'export\' is only available in ES6 (use esnext option).\nroutes/application.js: line 29, col 6, Missing semicolon.\nroutes/application.js: line 111, col 8, Missing semicolon.\n\n4 errors'); 
+    assert.ok(false, 'routes/application.js should pass jshint.\nroutes/application.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nroutes/application.js: line 4, col 1, \'export\' is only available in ES6 (use esnext option).\nroutes/application.js: line 29, col 6, Missing semicolon.\nroutes/application.js: line 112, col 8, Missing semicolon.\n\n4 errors'); 
   });
 
 });
@@ -5475,7 +5508,7 @@ define('flamestack/tests/services/datapoint.jshint', function () {
   QUnit.module('JSHint - services');
   QUnit.test('services/datapoint.js should pass jshint', function(assert) { 
     assert.expect(1);
-    assert.ok(false, 'services/datapoint.js should pass jshint.\nservices/datapoint.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nservices/datapoint.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\nservices/datapoint.js: line 69, col 31, [\'login\'] is better written in dot notation.\nservices/datapoint.js: line 74, col 32, [\'login\'] is better written in dot notation.\nservices/datapoint.js: line 244, col 21, \'arrData\' is already defined.\nservices/datapoint.js: line 246, col 21, \'arrData\' is already defined.\nservices/datapoint.js: line 251, col 21, \'arrData\' used out of scope.\nservices/datapoint.js: line 252, col 90, \'arrData\' used out of scope.\nservices/datapoint.js: line 254, col 61, \'arrData\' used out of scope.\nservices/datapoint.js: line 397, col 8, Unnecessary semicolon.\nservices/datapoint.js: line 430, col 8, Unnecessary semicolon.\n\n11 errors'); 
+    assert.ok(false, 'services/datapoint.js should pass jshint.\nservices/datapoint.js: line 1, col 1, \'import\' is only available in ES6 (use esnext option).\nservices/datapoint.js: line 3, col 1, \'export\' is only available in ES6 (use esnext option).\nservices/datapoint.js: line 69, col 31, [\'login\'] is better written in dot notation.\nservices/datapoint.js: line 74, col 32, [\'login\'] is better written in dot notation.\nservices/datapoint.js: line 244, col 21, \'arrData\' is already defined.\nservices/datapoint.js: line 246, col 21, \'arrData\' is already defined.\nservices/datapoint.js: line 251, col 21, \'arrData\' used out of scope.\nservices/datapoint.js: line 252, col 90, \'arrData\' used out of scope.\nservices/datapoint.js: line 254, col 61, \'arrData\' used out of scope.\nservices/datapoint.js: line 397, col 8, Unnecessary semicolon.\nservices/datapoint.js: line 431, col 8, Unnecessary semicolon.\nservices/datapoint.js: line 463, col 8, Unnecessary semicolon.\n\n12 errors'); 
   });
 
 });
